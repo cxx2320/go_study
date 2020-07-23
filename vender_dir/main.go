@@ -4,9 +4,8 @@ package main
 
 import (
 	"fmt"
-	"cxx"
 )
 
-func main()  {
-	fmt.Println(Add(2,6))
+func main() {
+	fmt.Println(Add(2, 6))
 }

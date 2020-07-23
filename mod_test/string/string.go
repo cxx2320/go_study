@@ -1,10 +1,10 @@
 package string
 
-import(
+import (
 	Math "mod_test/test_math"
 )
 
 func Add(s string) string {
-	Math.Add(100,20)
-	return "input:"+s
+	Math.Add(100, 20)
+	return "input:" + s
 }
