@@ -12,17 +12,18 @@ func main() {
 
 	// 声明一个有值的map
 	// user := map[string]string{"age": "18"}
+
 	user["name"] = "柴星星"
 	user["age"] = "18"
 
-	fmt.Println("是", user["age"])
+	fmt.Println("年龄", user["age"])
 
 	capital, ok := user["age"]
 	fmt.Println(capital, ok)
 
 	// range循环 map
-	for key := range user {
-		fmt.Println("key:", key)
+	for key, v := range user {
+		fmt.Println(key, v)
 	}
 
 	// 删除
