@@ -3,6 +3,20 @@ package main
 import "fmt"
 
 func main() {
+	q8()
+}
+
+func makeMap() {
+	var mapLit = map[string]string{}
+	fmt.Println(mapLit)
+}
+
+func makeMap1() {
+	// 使用 interface 声明一个值可以为任意类型的map
+	// mapList := map[string]interface{"name":"cxx","age":18}
+
+	//初始化
+	// var mapLit = map[string]string
 
 	// 声明一个空map
 	user := make(map[string]string)
@@ -30,4 +44,32 @@ func main() {
 	delete(user, "age")
 	age, ok := user["age"]
 	fmt.Println(age, ok)
+}
+
+// 检查key是否存在
+func checkKeyExits() {
+	mapList := map[string]int{"name": 20, "age": 18}
+	if _, ok := mapList["name"]; ok {
+		fmt.Println("exists")
+	} else {
+		fmt.Println("not exists")
+	}
+}
+
+// 删除key
+func deleteKey() {
+	mapList := map[string]int{"name": 20, "age": 18}
+	delete(mapList, "name")
+	if _, ok := mapList["name"]; ok {
+		fmt.Println("exists")
+	} else {
+		fmt.Println("not exists")
+	}
+}
+
+func q8() {
+	capitals := map[string]string{"France": "Paris", "Italy": "Rome", "Japan": "Tokyo"}
+	for key := range capitals {
+		fmt.Println("Map item: Capital of", key, "is", capitals[key])
+	}
 }
