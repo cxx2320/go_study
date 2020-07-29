@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	q8()
+	manyMap()
 }
 
 func makeMap() {
@@ -72,4 +72,14 @@ func q8() {
 	for key := range capitals {
 		fmt.Println("Map item: Capital of", key, "is", capitals[key])
 	}
+}
+
+// 多值map
+func manyMap() {
+	items := make([]map[int]int, 5)
+	for i := range items {
+		items[i] = make(map[int]int, 1)
+		items[i][1] = 2
+	}
+	fmt.Printf("Version A: Value of items: %v\n", items)
 }
