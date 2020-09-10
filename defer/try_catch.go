@@ -17,9 +17,7 @@ func Try(try tryFunc, catch catchFunc) {
 }
 
 func main() {
-	age := 18
 	Try(func() {
-		fmt.Println(age)
 		panic("1")
 		panic("2")
 	}, func(a interface{}) {
